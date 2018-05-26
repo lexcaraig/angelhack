@@ -10,8 +10,12 @@ import { Reports } from '../../../shared/mocks/reports.mock';
 })
 export class ReportsComponent implements OnInit {
   isPending: boolean = false;
+  displayedColumns = ['username', 'preview', 'type', 'action'];
+  dataSource = ReportPreview;
 
-  constructor(private _afd: AngularFireDatabase) {}
+  constructor(private _afd: AngularFireDatabase) {
+
+  }
 
   ngOnInit() {}
 
@@ -19,3 +23,12 @@ export class ReportsComponent implements OnInit {
     this.isPending = !this.isPending;
   }
 }
+
+const ReportPreview = [
+  {
+    username: "trishmoreno02",
+    preview: "May sunog dito sa\'min",
+    type: "Medical",
+    action: " "
+  }
+];
