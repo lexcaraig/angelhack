@@ -10,4 +10,8 @@ import Foundation
 
 public protocol ReportVCDelegate: class {
     func closeTapped()
+    
+    func attachmentTapped()
+    
+    func sendReport()
 }

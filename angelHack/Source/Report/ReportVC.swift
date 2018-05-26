@@ -39,7 +39,9 @@ class ReportVC: JAViewController {
         })
 
         self.setUpTargetActions(with: [
-                self.rootView.closeButton : #selector(ReportVC.closeAction)
+                self.rootView.closeButton : #selector(ReportVC.closeAction),
+                self.rootView.attachmentButton: #selector(ReportVC.attachmentAction),
+                self.rootView.sendReportButton: #selector(ReportVC.sendReportAction)
             ]
         )
     }
@@ -52,7 +54,7 @@ class ReportVC: JAViewController {
 }
 
 // MARK: - Views
-private extension ReportVC {
+extension ReportVC {
     unowned var rootView: ReportView { return self.view as! ReportView } // swiftlint:disable:this force_cast
 }
 
@@ -61,6 +63,14 @@ private extension ReportVC {
     
     @objc func closeAction() {        
         self.delegate.closeTapped()
+    }
+    
+    @objc func attachmentAction() {
+        self.delegate.attachmentTapped()
+    }
+    
+    @objc func sendReportAction() {
+        self.delegate.sendReport()
     }
 }
 
