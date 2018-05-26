@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
   public navLinks = [
-    { path: '/account/dashboard', name: 'Dashboard', icon: 'compare_arrows' }
+    { path: '/account/dashboard', name: 'Dashboard', icon: 'dashboard' }
   ];
 
   constructor() { }

@@ -1,7 +1,23 @@
 <mat-toolbar>
-  <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+  <mat-toolbar-row
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    class="mat-elevation-z2">
     <span>{{ appName }}</span>
     <span></span>
-    <mat-icon>verified_user</mat-icon>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
   </mat-toolbar-row>
 </mat-toolbar>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>settings</mat-icon>  Account Settings
+  </button>
+  <button mat-menu-item>
+    <mat-icon>account_circle</mat-icon> Preferences
+  </button>
+  <button mat-menu-item routerLink="/">
+    <mat-icon>settings_power</mat-icon> Logout
+  </button>
+</mat-menu>
