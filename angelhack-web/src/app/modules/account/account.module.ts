@@ -7,8 +7,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MaterialModule } from '../../shared/material/material.module';
 import { ReportListComponent } from './report-list/report-list.component';
 import { ReportsComponent } from './reports/reports.component';
-import { ReportDetailsComponent } from './report-details/report-details.component';
 import { FirebaseModule } from '../../shared/firebase/firebase.module';
+import { ReportDetailsDialogComponent } from './report-details-dialog/report-details-dialog.component';
 
 @NgModule({
   imports: [
@@ -25,7 +25,10 @@ import { FirebaseModule } from '../../shared/firebase/firebase.module';
     DashboardComponent,
     ReportListComponent,
     ReportsComponent,
-    ReportDetailsComponent
+    ReportDetailsDialogComponent
+  ],
+  entryComponents: [
+    ReportDetailsDialogComponent
   ]
 })
 export class AccountModule { }

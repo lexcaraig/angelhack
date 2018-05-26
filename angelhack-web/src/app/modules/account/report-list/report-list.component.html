@@ -2,33 +2,8 @@
   <label class="angelhack-utils__page-label">List of Reports</label>
   <span></span>
 </div>
-<div fxLayout="row" fxFlexFill fxLayoutAlign="space-between center">
-  <table mat-table [dataSource]="reportsMock" class="mat-elevation-z8 -width-100">
-
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.username}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="type">
-      <th mat-header-cell *matHeaderCellDef> Type of incident </th>
-      <td mat-cell *matCellDef="let element"> {{element.type}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="preview">
-      <th mat-header-cell *matHeaderCellDef> Preview </th>
-      <td mat-cell *matCellDef="let element"> &nbsp; </td>
-    </ng-container>
-
-    <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef> Actions </th>
-      <td mat-cell *matCellDef="let element">
-        <mat-icon class="-blue">remove_red_eye</mat-icon>&nbsp;
-        <mat-icon class="-green">check</mat-icon>
-      </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="columns"></tr>
-    <tr mat-row *matRowDef="let row; columns: columns;"></tr>
-  </table>
-</div>
+<angelhack-table
+  [columns]="columns"
+  [source]="reportsMock"
+  (onView)="openReportDetailsDialog($event)">
+</angelhack-table>
