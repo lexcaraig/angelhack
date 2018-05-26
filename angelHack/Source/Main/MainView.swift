@@ -29,7 +29,7 @@ public final class MainView: HeroView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.blue
+        self.backgroundColor = UIColor.lightGray
         
         self.rpd.subviews(forAutoLayout: self.collectionView)
         

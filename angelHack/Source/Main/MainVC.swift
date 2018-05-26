@@ -8,10 +8,14 @@
 
 import UIKit
 
-class MainVC: UIViewController {
+class MainVC: HeroViewController {
+    
+    // MARK: Delegate Properties
+    private unowned let delegate: MainVCDelegate
     
     // MARK: Intializer
-    public init() {
+    public init(delegate: MainVCDelegate) {
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -27,7 +31,13 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.dataSource = MainDataSource(collectionView: self.collectionView)
+        let agenciesData: [Agencies] = [
+            Agencies(name: "LTO", logo: #imageLiteral(resourceName: "lto")),
+            Agencies(name: "MMDA", logo: #imageLiteral(resourceName: "mmda")),
+            Agencies(name: "LGU", logo: #imageLiteral(resourceName: "lgu"))
+        ]
+        
+        self.dataSource = MainDataSource(agencies: agenciesData, collectionView: self.collectionView)
         self.collectionView.delegate = self
     }
 
@@ -63,7 +73,7 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        let viewModel: FavoriteViewModel = self.dataSource.viewModels[indexPath.item]
-//        self.delegate.selected(poi: viewModel.model)
+        self.delegate.selected()
         
         print(" CARD IS CLICKED")
     }

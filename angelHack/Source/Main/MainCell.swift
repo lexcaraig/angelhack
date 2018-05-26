@@ -21,7 +21,7 @@ public final class MainCell: UICollectionViewCell {
     
     public let cellImageView: UIImageView = {
         let view: UIImageView = UIImageView()
-        view.image = #imageLiteral(resourceName: "image (1)")
+        view.image = #imageLiteral(resourceName: "lto")
         return view
     }()
     
@@ -56,8 +56,9 @@ public final class MainCell: UICollectionViewCell {
         return "\(type(of: MainCell.self))"
     }
     
-    public func configure() {
-        
+    public func configure(model: Agencies) {
+        self.cellLabel.text = model.name
+        self.cellImageView.image = model.logo
     }
 }
 

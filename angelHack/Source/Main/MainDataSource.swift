@@ -11,18 +11,17 @@ import UIKit
 class MainDataSource: HeroObject {
     
     // MARK: Initializer
-    public init(collectionView: UICollectionView) {
-        
+    public init(agencies: [Agencies], collectionView: UICollectionView) {
+        self.model = agencies
         self.collectionView = collectionView
         super.init()
         self.collectionView.register(MainCell.self, forCellWithReuseIdentifier: MainCell.identifier)
         self.collectionView.dataSource = self
-        
     }
     
     // MARK: Stored Properties
     private unowned let collectionView: UICollectionView
-    
+    private let model: [Agencies]
 }
 
 
@@ -34,7 +33,7 @@ extension MainDataSource: UICollectionViewDataSource {
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.model.count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -43,6 +42,8 @@ extension MainDataSource: UICollectionViewDataSource {
             else {
                 fatalError("Not a valid Cell")
         }
+        
+        cell.configure(model: self.model[indexPath.row])
         
         return cell
     }

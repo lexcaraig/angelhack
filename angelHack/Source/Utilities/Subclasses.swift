@@ -15,8 +15,13 @@ open class HeroObject: NSObject {
     }
 }
 
-
 open class HeroView: UIView {
+    deinit {
+        print("\(type(of: self)) was deallocated")
+    }
+}
+
+open class HeroViewController: UIViewController {
     deinit {
         print("\(type(of: self)) was deallocated")
     }

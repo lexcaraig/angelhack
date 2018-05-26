@@ -27,11 +27,44 @@ public final class MainCoordinator: AbstractCoordinator {
     // MARK: Instance Methods
     public override func start() {
         super.start()
-        let vc: MainVC = MainVC()
+        let vc: MainVC = MainVC(delegate: self)
         self.navigationController.pushViewController(
             vc,
             animated: true
         )
     }
+}
 
+extension MainCoordinator: MainVCDelegate {
+    public func selected() {
+        let detailCoordinator: DetailCoordinator = DetailCoordinator(
+            navigationController: self.navigationController
+        )
+        
+        detailCoordinator.start()
+        self.add(childCoordinator: detailCoordinator)
+        
+        self.navigationController.delegate = self
+    }
+}
+
+// MARK: - UINavigationControllerDelegate Protocol
+extension MainCoordinator: UINavigationControllerDelegate {
+    
+    public func navigationController(
+        _ navigationController: UINavigationController,
+        didShow viewController: UIViewController,
+        animated: Bool) {
+        
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(
+            forKey: UITransitionContextViewControllerKey.from),
+            !navigationController.viewControllers.contains(fromViewController)
+            else { return }
+        
+        guard let coordinator = self.childCoordinators.first
+            else { return }
+        
+        self.remove(childCoordinator: coordinator)
+        self.navigationController.delegate = self
+    }
 }
