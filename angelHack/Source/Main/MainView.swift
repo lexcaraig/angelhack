@@ -13,19 +13,32 @@ import Kio
 public final class MainView: HeroView {
     
     // MARK: Subviews
-//    public let button: UIButton = {
-//        let view: UIButton = UIButton(type: UIButtonType.custom)
-//        view.setTitle("Share", for: UIControlState.normal)
-//        view.setTitleColor(UIColor.blue, for: UIControlState.normal)
-//        return view
-//    }()
+    public let collectionView: UICollectionView = {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        let view: UICollectionView = UICollectionView(
+            frame: CGRect.zero,
+            collectionViewLayout: layout
+        )
+        
+        view.showsVerticalScrollIndicator = false
+        view.backgroundColor = UIColor.clear
+        view.isUserInteractionEnabled = true
+        return view
+    }()
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.black
+        self.backgroundColor = UIColor.blue
         
-        self.rpd.subviews(forAutoLayout: [])
+        self.rpd.subviews(forAutoLayout: self.collectionView)
+        
+        self.collectionView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview().inset(10.0)
+        }
         
     }
     

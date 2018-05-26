@@ -22,6 +22,8 @@
 		7C11E8E220B91BC00035DA15 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8E120B91BC00035DA15 /* MainCoordinator.swift */; };
 		7C11E8E420B91BF10035DA15 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8E320B91BF10035DA15 /* MainView.swift */; };
 		7C11E8E620B91C540035DA15 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8E520B91C540035DA15 /* AppCoordinator.swift */; };
+		7C11E8E820B93DBE0035DA15 /* MainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8E720B93DBE0035DA15 /* MainDataSource.swift */; };
+		7C11E8EA20B9403C0035DA15 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8E920B9403C0035DA15 /* MainCell.swift */; };
 		9CD0550B454706255DBDC284 /* Pods_angelHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FB7C7D96B2E9B1A6DB318F /* Pods_angelHack.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		7C11E8E120B91BC00035DA15 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		7C11E8E320B91BF10035DA15 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7C11E8E520B91C540035DA15 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7C11E8E720B93DBE0035DA15 /* MainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataSource.swift; sourceTree = "<group>"; };
+		7C11E8E920B9403C0035DA15 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		9ADF12FC7F280B035EB3CB2B /* Pods_angelHackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_angelHackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF85A13C752366D2C522318C /* Pods-angelHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-angelHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-angelHack/Pods-angelHack.debug.xcconfig"; sourceTree = "<group>"; };
 		AFF14B0C1196FDCE12EC16A6 /* Pods-angelHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-angelHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-angelHack/Pods-angelHack.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 				7C11E8A720B8FF400035DA15 /* MainVC.swift */,
 				7C11E8E120B91BC00035DA15 /* MainCoordinator.swift */,
 				7C11E8E320B91BF10035DA15 /* MainView.swift */,
+				7C11E8E720B93DBE0035DA15 /* MainDataSource.swift */,
+				7C11E8E920B9403C0035DA15 /* MainCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -455,10 +461,12 @@
 				7C11E8E420B91BF10035DA15 /* MainView.swift in Sources */,
 				7C11E8E220B91BC00035DA15 /* MainCoordinator.swift in Sources */,
 				7C11E8A620B8FF400035DA15 /* AppDelegate.swift in Sources */,
+				7C11E8EA20B9403C0035DA15 /* MainCell.swift in Sources */,
 				7C11E8E620B91C540035DA15 /* AppCoordinator.swift in Sources */,
 				7C11E8E020B91AD70035DA15 /* Coordinator.swift in Sources */,
 				7C11E8DC20B91A810035DA15 /* AbstractCoordinator.swift in Sources */,
 				7C11E8DE20B91AA90035DA15 /* Subclasses.swift in Sources */,
+				7C11E8E820B93DBE0035DA15 /* MainDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
