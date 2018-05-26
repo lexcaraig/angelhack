@@ -9,15 +9,27 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   public services = [
-    { avatar: '', name: 'LTO', title: 'Land Transfortaion Office', description: 'Something' }
+    {
+      avatar: 'lto-header-image',
+      name: 'LTO',
+      title: 'Land Transfortaion Office',
+      description: 'Something'
+    },
+    {
+      avatar: 'mmda-header-image',
+      name: 'MMDA',
+      title: 'Metropolitan',
+      description: 'Something'
+    },
+    {
+      avatar: 'lgu-header-image',
+      name: 'LGU',
+      title: 'Land Transfortaion Office',
+      description: 'Something'
+    }
   ];
 
-  constructor(
-    private _afd: AngularFireDatabase,
-    private _router: Router
-  ) { }
+  constructor(private _afd: AngularFireDatabase, private _router: Router) {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
