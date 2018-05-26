@@ -1,0 +1,93 @@
+.icon-button {
+  margin: 0 4px;
+}
+
+mat-sidenav {
+  width: 280px;
+  background-color: #e8e8e8;
+}
+
+.sidenav-content {
+  top: 64px !important;
+}
+
+mat-sidenav-content {
+  margin-left: 280px;
+  background-color: #e8e8e8;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 8px 0;
+
+  .label {
+    cursor: default;
+    font-size: 13px;
+    padding: 15px 24px 10px;
+  }
+
+  li {
+    display: block;
+    min-height: 40px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    padding-left: 28px;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    color: rgba(0,0,0,0.87);
+    cursor: pointer;
+
+    &.active {
+      border-right: 1px solid #464096;
+
+      a {
+        color: #464096;
+
+        mat-icon {
+          color: #464096;
+        }
+      }
+    }
+
+    &:hover {
+      background: rgba(0,0,0,0.12);
+    }
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      color: inherit;
+
+      .icon {
+        height: 24px;
+        width: 24px;
+        float: left;
+        margin-top: 8px;
+        vertical-align: middle;
+        color: black;
+        opacity: .54;
+        fill: currentColor;
+      }
+
+      span {
+        padding-left: 32px;
+        padding-left: 20px;
+        display: inline-block;
+        line-height: 40px;
+        vertical-align: top;
+        width: 176px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+.admin-app__route-container {
+  padding: 0 32px;
+  height: calc(100vh - 64px - 24px);
+  margin-top: 24px;
+}

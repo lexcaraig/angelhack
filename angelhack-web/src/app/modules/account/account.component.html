@@ -1,3 +1,28 @@
-<p>
-  account works!
-</p>
+<angelhack-toolbar></angelhack-toolbar>
+<mat-sidenav-container class="">
+  <mat-sidenav #sidenav
+    mode="side"
+    opened="true"
+    fixedInViewport="true"
+    class="nt-utils__background-transparent sidenav-content">
+    <div fxLayout="column" fxLayoutAlign="none">
+      <ul>
+        <div class="label">
+          Menu
+        </div>
+        <li *ngFor="let link of navLinks" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a [routerLink]="link.path">
+            <mat-icon class="mat-18 icon">{{ link.icon }}</mat-icon>
+            <span>{{ link.name | uppercase }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="nt-utils__background-transparent">
+    <div class="admin-app__route-container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
