@@ -1,53 +1,19 @@
-<mat-grid-list cols="3" rowHeight="300px">
-  <mat-grid-tile [colspan]="1" [rowspan]="1" class="category-card">
-      <mat-card> 
-          <mat-card-header>
-              <div mat-card-avatar class="lto-header-image"></div>
-              <mat-card-title>LTO</mat-card-title>
-              <mat-card-subtitle>Land Transportation Office</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nihil temporibus voluptate! Quisquam, autem facilis. Nulla eum obcaecati libero voluptates maxime expedita, architecto culpa laudantium a, nam minus, repudiandae aspernatur?
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>VIEW</button>
-            </mat-card-actions>
-          </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="1" [rowspan]="1" class="category-card">
-      <mat-card> 
-          <mat-card-header>
-              <div mat-card-avatar class="lgu-header-image"></div>
-              <mat-card-title>LGU</mat-card-title>
-              <mat-card-subtitle>Local Government Unit</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nihil temporibus voluptate! Quisquam, autem facilis. Nulla eum obcaecati libero voluptates maxime expedita, architecto culpa laudantium a, nam minus, repudiandae aspernatur?
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>VIEW</button>
-            </mat-card-actions>
-          </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="1" [rowspan]="1" class="category-card">
-      <mat-card> 
-        <mat-card-header>
-            <div mat-card-avatar class="mmda-header-image"></div>
-            <mat-card-title>MMDA</mat-card-title>
-            <mat-card-subtitle>Metropolitan Manila Development Authority</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nihil temporibus voluptate! Quisquam, autem facilis. Nulla eum obcaecati libero voluptates maxime expedita architecto culpa laudantium a
-            </p>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-button>VIEW</button>
-        </mat-card-actions>
-        </mat-card>
-    </mat-grid-tile>
- </mat-grid-list>
+<mat-card>
+  <mat-card-header>
+    <div
+      mat-card-avatar
+      class="angelhack-category__avatar"
+      [ngStyle]="{'background-image': avatar}">
+    </div>
+    <mat-card-title>{{ name }}</mat-card-title>
+    <mat-card-subtitle>{{ title }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{ description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-a [routerLink]="['../reports', name]">VIEW</a>
+  </mat-card-actions>
+</mat-card>

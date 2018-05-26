@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'angelhack-category',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./category.component.scss']
 })
 export class CategoryComponent implements OnInit {
+  @Input('avatar')      avatar:       string = '';
+  @Input('name')        name:         string = '';
+  @Input('title')       title:        string = '';
+  @Input('description') description:  string = '';
 
   constructor() { }
 

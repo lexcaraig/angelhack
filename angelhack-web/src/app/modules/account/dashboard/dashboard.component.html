@@ -2,5 +2,14 @@
   <label class="angelhack-utils__page-label">Dashboard</label>
   <span></span>
 </div>
-<angelhack-category></angelhack-category>
+<div fxLayout="row" fxFlexFill fxLayoutGap="10px grid">
+  <angelhack-category
+    *ngFor="let service of services"
+    fxFlex="350px"
+    [avatar]      ="service.avatar"
+    [name]        ="service.name"
+    [title]       ="service.title"
+    [description] ="service.description">
+  </angelhack-category>
+</div>
 

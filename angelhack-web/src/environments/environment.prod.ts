@@ -2,11 +2,11 @@ export const environment = {
   production: true,
   appName: 'Angel Hack Buddies',
   firebase: {
-    apiKey: 'AIzaSyBpPGIgKtCBZf8j57bXoeKxqBQMYhstXag',
-    authDomain: 'angelhack-c3e81.firebaseapp.com',
-    databaseURL: 'https://angelhack-c3e81.firebaseio.com',
-    projectId: 'angelhack-c3e81',
+    apiKey: 'AIzaSyANqfJV9tZL_e2FPuskx_IZ_uz5B4Q9OKc',
+    authDomain: 'angel-hack-f10fb.firebaseapp.com',
+    databaseURL: 'https://angel-hack-f10fb.firebaseio.com',
+    projectId: 'angel-hack-f10fb',
     storageBucket: '',
-    messagingSenderId: '790603538748'
+    messagingSenderId: '139723233762'
   }
 };
