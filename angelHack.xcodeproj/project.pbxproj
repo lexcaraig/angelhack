@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AA6CB70791355AB0DA46B04 /* Pods_angelHackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADF12FC7F280B035EB3CB2B /* Pods_angelHackUITests.framework */; };
+		65E9A9AF3AFF142F912415EA /* Pods_angelHackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D972A3885A86D35DC23A6B4 /* Pods_angelHackTests.framework */; };
 		7C11E8A620B8FF400035DA15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8A520B8FF400035DA15 /* AppDelegate.swift */; };
-		7C11E8A820B8FF400035DA15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8A720B8FF400035DA15 /* ViewController.swift */; };
+		7C11E8A820B8FF400035DA15 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8A720B8FF400035DA15 /* MainVC.swift */; };
 		7C11E8AB20B8FF400035DA15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C11E8A920B8FF400035DA15 /* Main.storyboard */; };
 		7C11E8AD20B8FF440035DA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C11E8AC20B8FF440035DA15 /* Assets.xcassets */; };
 		7C11E8B020B8FF440035DA15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C11E8AE20B8FF440035DA15 /* LaunchScreen.storyboard */; };
 		7C11E8BB20B8FF450035DA15 /* angelHackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8BA20B8FF450035DA15 /* angelHackTests.swift */; };
 		7C11E8C620B8FF450035DA15 /* angelHackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8C520B8FF450035DA15 /* angelHackUITests.swift */; };
+		7C11E8DC20B91A810035DA15 /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8DB20B91A810035DA15 /* AbstractCoordinator.swift */; };
+		7C11E8DE20B91AA90035DA15 /* Subclasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8DD20B91AA90035DA15 /* Subclasses.swift */; };
+		7C11E8E020B91AD70035DA15 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8DF20B91AD70035DA15 /* Coordinator.swift */; };
+		7C11E8E220B91BC00035DA15 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8E120B91BC00035DA15 /* MainCoordinator.swift */; };
+		7C11E8E420B91BF10035DA15 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8E320B91BF10035DA15 /* MainView.swift */; };
+		7C11E8E620B91C540035DA15 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E8E520B91C540035DA15 /* AppCoordinator.swift */; };
+		9CD0550B454706255DBDC284 /* Pods_angelHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FB7C7D96B2E9B1A6DB318F /* Pods_angelHack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57841904C412CA0B4EC12E06 /* Pods-angelHackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-angelHackTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-angelHackTests/Pods-angelHackTests.release.xcconfig"; sourceTree = "<group>"; };
+		5E954F39373F0A0BA12C389A /* Pods-angelHackUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-angelHackUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-angelHackUITests/Pods-angelHackUITests.release.xcconfig"; sourceTree = "<group>"; };
+		60FB7C7D96B2E9B1A6DB318F /* Pods_angelHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_angelHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6329CC5260BAE7A2011F4392 /* Pods-angelHackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-angelHackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-angelHackTests/Pods-angelHackTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D972A3885A86D35DC23A6B4 /* Pods_angelHackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_angelHackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C11E8A220B8FF400035DA15 /* angelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = angelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C11E8A520B8FF400035DA15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C11E8A720B8FF400035DA15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7C11E8A720B8FF400035DA15 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		7C11E8AA20B8FF400035DA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C11E8AC20B8FF440035DA15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C11E8AF20B8FF440035DA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +61,16 @@
 		7C11E8C120B8FF450035DA15 /* angelHackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = angelHackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C11E8C520B8FF450035DA15 /* angelHackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = angelHackUITests.swift; sourceTree = "<group>"; };
 		7C11E8C720B8FF450035DA15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C11E8DB20B91A810035DA15 /* AbstractCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractCoordinator.swift; sourceTree = "<group>"; };
+		7C11E8DD20B91AA90035DA15 /* Subclasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subclasses.swift; sourceTree = "<group>"; };
+		7C11E8DF20B91AD70035DA15 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		7C11E8E120B91BC00035DA15 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		7C11E8E320B91BF10035DA15 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7C11E8E520B91C540035DA15 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9ADF12FC7F280B035EB3CB2B /* Pods_angelHackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_angelHackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF85A13C752366D2C522318C /* Pods-angelHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-angelHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-angelHack/Pods-angelHack.debug.xcconfig"; sourceTree = "<group>"; };
+		AFF14B0C1196FDCE12EC16A6 /* Pods-angelHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-angelHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-angelHack/Pods-angelHack.release.xcconfig"; sourceTree = "<group>"; };
+		CD3CF9B30441A63F66207FA4 /* Pods-angelHackUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-angelHackUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-angelHackUITests/Pods-angelHackUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD0550B454706255DBDC284 /* Pods_angelHack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E9A9AF3AFF142F912415EA /* Pods_angelHackTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA6CB70791355AB0DA46B04 /* Pods_angelHackUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +108,8 @@
 				7C11E8B920B8FF450035DA15 /* angelHackTests */,
 				7C11E8C420B8FF450035DA15 /* angelHackUITests */,
 				7C11E8A320B8FF400035DA15 /* Products */,
+				93A02D2DD5826A1E1EF0816F /* Pods */,
+				F8DB00683FA969A7AC3914FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +126,7 @@
 		7C11E8A420B8FF400035DA15 /* angelHack */ = {
 			isa = PBXGroup;
 			children = (
-				7C11E8A520B8FF400035DA15 /* AppDelegate.swift */,
-				7C11E8A720B8FF400035DA15 /* ViewController.swift */,
-				7C11E8A920B8FF400035DA15 /* Main.storyboard */,
-				7C11E8AC20B8FF440035DA15 /* Assets.xcassets */,
-				7C11E8AE20B8FF440035DA15 /* LaunchScreen.storyboard */,
-				7C11E8B120B8FF440035DA15 /* Info.plist */,
+				7C11E8D320B8FF8A0035DA15 /* Source */,
 			);
 			path = angelHack;
 			sourceTree = "<group>";
@@ -125,6 +149,96 @@
 			path = angelHackUITests;
 			sourceTree = "<group>";
 		};
+		7C11E8D320B8FF8A0035DA15 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7C11E8D720B91A1F0035DA15 /* Utilities */,
+				7C11E8D620B9001F0035DA15 /* Main */,
+				7C11E8D520B8FFAA0035DA15 /* Supporting Files */,
+				7C11E8D420B8FF990035DA15 /* App Controllers */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		7C11E8D420B8FF990035DA15 /* App Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C11E8A520B8FF400035DA15 /* AppDelegate.swift */,
+				7C11E8E520B91C540035DA15 /* AppCoordinator.swift */,
+			);
+			path = "App Controllers";
+			sourceTree = "<group>";
+		};
+		7C11E8D520B8FFAA0035DA15 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C11E8AC20B8FF440035DA15 /* Assets.xcassets */,
+				7C11E8AE20B8FF440035DA15 /* LaunchScreen.storyboard */,
+				7C11E8A920B8FF400035DA15 /* Main.storyboard */,
+				7C11E8B120B8FF440035DA15 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7C11E8D620B9001F0035DA15 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7C11E8A720B8FF400035DA15 /* MainVC.swift */,
+				7C11E8E120B91BC00035DA15 /* MainCoordinator.swift */,
+				7C11E8E320B91BF10035DA15 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7C11E8D720B91A1F0035DA15 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7C11E8DA20B91A3C0035DA15 /* Protocols */,
+				7C11E8D820B91A290035DA15 /* Class */,
+				7C11E8DD20B91AA90035DA15 /* Subclasses.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7C11E8D820B91A290035DA15 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				7C11E8DB20B91A810035DA15 /* AbstractCoordinator.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		7C11E8DA20B91A3C0035DA15 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7C11E8DF20B91AD70035DA15 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		93A02D2DD5826A1E1EF0816F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF85A13C752366D2C522318C /* Pods-angelHack.debug.xcconfig */,
+				AFF14B0C1196FDCE12EC16A6 /* Pods-angelHack.release.xcconfig */,
+				6329CC5260BAE7A2011F4392 /* Pods-angelHackTests.debug.xcconfig */,
+				57841904C412CA0B4EC12E06 /* Pods-angelHackTests.release.xcconfig */,
+				CD3CF9B30441A63F66207FA4 /* Pods-angelHackUITests.debug.xcconfig */,
+				5E954F39373F0A0BA12C389A /* Pods-angelHackUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F8DB00683FA969A7AC3914FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60FB7C7D96B2E9B1A6DB318F /* Pods_angelHack.framework */,
+				6D972A3885A86D35DC23A6B4 /* Pods_angelHackTests.framework */,
+				9ADF12FC7F280B035EB3CB2B /* Pods_angelHackUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C11E8CA20B8FF450035DA15 /* Build configuration list for PBXNativeTarget "angelHack" */;
 			buildPhases = (
+				248F60F6A40194D33D176C8E /* [CP] Check Pods Manifest.lock */,
 				7C11E89E20B8FF400035DA15 /* Sources */,
 				7C11E89F20B8FF400035DA15 /* Frameworks */,
 				7C11E8A020B8FF400035DA15 /* Resources */,
+				86019FBADBF1D41F97DA865A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C11E8CD20B8FF450035DA15 /* Build configuration list for PBXNativeTarget "angelHackTests" */;
 			buildPhases = (
+				F83B3A3F8503949E0F55B5E8 /* [CP] Check Pods Manifest.lock */,
 				7C11E8B220B8FF450035DA15 /* Sources */,
 				7C11E8B320B8FF450035DA15 /* Frameworks */,
 				7C11E8B420B8FF450035DA15 /* Resources */,
@@ -167,6 +284,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C11E8D020B8FF450035DA15 /* Build configuration list for PBXNativeTarget "angelHackUITests" */;
 			buildPhases = (
+				8F16730C8C0442B8DCE4DE90 /* [CP] Check Pods Manifest.lock */,
 				7C11E8BD20B8FF450035DA15 /* Sources */,
 				7C11E8BE20B8FF450035DA15 /* Frameworks */,
 				7C11E8BF20B8FF450035DA15 /* Resources */,
@@ -251,13 +369,96 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		248F60F6A40194D33D176C8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-angelHack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86019FBADBF1D41F97DA865A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-angelHack/Pods-angelHack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kio/Kio.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kio.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-angelHack/Pods-angelHack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F16730C8C0442B8DCE4DE90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-angelHackUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F83B3A3F8503949E0F55B5E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-angelHackTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C11E89E20B8FF400035DA15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C11E8A820B8FF400035DA15 /* ViewController.swift in Sources */,
+				7C11E8A820B8FF400035DA15 /* MainVC.swift in Sources */,
+				7C11E8E420B91BF10035DA15 /* MainView.swift in Sources */,
+				7C11E8E220B91BC00035DA15 /* MainCoordinator.swift in Sources */,
 				7C11E8A620B8FF400035DA15 /* AppDelegate.swift in Sources */,
+				7C11E8E620B91C540035DA15 /* AppCoordinator.swift in Sources */,
+				7C11E8E020B91AD70035DA15 /* Coordinator.swift in Sources */,
+				7C11E8DC20B91A810035DA15 /* AbstractCoordinator.swift in Sources */,
+				7C11E8DE20B91AA90035DA15 /* Subclasses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,10 +629,12 @@
 		};
 		7C11E8CB20B8FF450035DA15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF85A13C752366D2C522318C /* Pods-angelHack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = angelHack/Info.plist;
+				DEVELOPMENT_TEAM = 3S4MHP69HY;
+				INFOPLIST_FILE = "angelHack/Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,10 +648,12 @@
 		};
 		7C11E8CC20B8FF450035DA15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFF14B0C1196FDCE12EC16A6 /* Pods-angelHack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = angelHack/Info.plist;
+				DEVELOPMENT_TEAM = 3S4MHP69HY;
+				INFOPLIST_FILE = "angelHack/Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,6 +667,7 @@
 		};
 		7C11E8CE20B8FF450035DA15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6329CC5260BAE7A2011F4392 /* Pods-angelHackTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,6 +688,7 @@
 		};
 		7C11E8CF20B8FF450035DA15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57841904C412CA0B4EC12E06 /* Pods-angelHackTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +709,7 @@
 		};
 		7C11E8D120B8FF450035DA15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD3CF9B30441A63F66207FA4 /* Pods-angelHackUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -521,6 +729,7 @@
 		};
 		7C11E8D220B8FF450035DA15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E954F39373F0A0BA12C389A /* Pods-angelHackUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

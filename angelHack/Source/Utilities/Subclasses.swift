@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import UIKit
+
+open class HeroObject: NSObject {
+    deinit {
+        print("\(self) was deallocated")
+    }
+}
+
+
+open class HeroView: UIView {
+    deinit {
+        print("\(type(of: self)) was deallocated")
+    }
+}

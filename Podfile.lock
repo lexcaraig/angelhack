@@ -1,0 +1,28 @@
+PODS:
+  - Kio (1.0.0)
+  - SnapKit (4.0.0)
+
+DEPENDENCIES:
+  - Kio (from `https://github.com/hooliooo/Kio.git`)
+  - SnapKit (~> 4.0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  Kio:
+    :git: https://github.com/hooliooo/Kio.git
+
+CHECKOUT OPTIONS:
+  Kio:
+    :commit: ca7791f2f40d26613c8150084b2c20330ae82362
+    :git: https://github.com/hooliooo/Kio.git
+
+SPEC CHECKSUMS:
+  Kio: 8b06fd71440719d60bff6b6543cbeeef85c1796c
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+
+PODFILE CHECKSUM: 51bf969da1533daa6c53f274388f46211be3c7c1
+
+COCOAPODS: 1.5.2
