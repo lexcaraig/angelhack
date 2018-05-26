@@ -15,6 +15,7 @@ class LoginView: UIView {
     let userNameFied: UITextField = {
         let view: UITextField = UITextField()
         view.placeholder = "Username"
+        view.text = "juan_d@gmail.com"
         view.layer.borderWidth = 1
         return view
     }()
@@ -23,6 +24,7 @@ class LoginView: UIView {
         let view: UITextField = UITextField()
         view.placeholder = "Password"
         view.isSecureTextEntry = true
+        view.text = "juan_d@gmail.com"
         view.layer.borderWidth = 1
         return view
     }()

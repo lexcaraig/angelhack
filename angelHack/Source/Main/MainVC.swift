@@ -92,7 +92,6 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let viewModel: FavoriteViewModel = self.dataSource.viewModels[indexPath.item]
         self.delegate.selected()
         
         print(" CARD IS CLICKED")

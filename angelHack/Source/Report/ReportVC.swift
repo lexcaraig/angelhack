@@ -8,6 +8,8 @@
 
 import UIKit
 import Kio
+import Firebase
+import FirebaseDatabase
 
 class ReportVC: JAViewController {
     
@@ -29,6 +31,12 @@ class ReportVC: JAViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let ref = Database.database().reference(withPath: "reports")
+        
+        ref.observe(.value, with: { snapshot in
+            print(snapshot.value as Any)
+        })
 
         self.setUpTargetActions(with: [
                 self.rootView.closeButton : #selector(ReportVC.closeAction)

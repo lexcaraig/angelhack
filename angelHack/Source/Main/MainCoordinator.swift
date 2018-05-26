@@ -41,7 +41,9 @@ public final class MainCoordinator: AbstractCoordinator {
 
 extension MainCoordinator: MainVCDelegate {
     public func logoutTapped() {
-        
+        print("LOG ME OUT")
+        self.navigationController.navigationBar.isHidden = true
+        self.navigationController.popViewController(animated: true)
     }
     
     public func selected() {

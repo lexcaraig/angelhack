@@ -30,6 +30,7 @@ public final class LoginCoordinator: AbstractCoordinator {
         let vc: LoginVC = LoginVC(delegate: self)
         self.navigationController.pushViewController(vc, animated: false)
         self.navigationController.navigationBar.isHidden = true
+        self.navigationController.delegate = self
     }
 }
 
@@ -41,5 +42,26 @@ extension LoginCoordinator: LoginVCDelegate {
         )
         mainCoordinator.start()
         self.add(childCoordinator: mainCoordinator)
+    }
+}
+
+// MARK: - UINavigationControllerDelegate Protocol
+extension LoginCoordinator: UINavigationControllerDelegate {
+    
+    public func navigationController(
+        _ navigationController: UINavigationController,
+        didShow viewController: UIViewController,
+        animated: Bool) {
+        
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(
+            forKey: UITransitionContextViewControllerKey.from),
+            !navigationController.viewControllers.contains(fromViewController)
+            else { return }
+        
+        guard let coordinator = self.childCoordinators.first
+            else { return }
+        
+        self.remove(childCoordinator: coordinator)
+        self.navigationController.delegate = self
     }
 }
