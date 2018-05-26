@@ -23,11 +23,15 @@ public final class MainCoordinator: AbstractCoordinator {
     
     // MARK: Stored Properties
     private let navigationController: UINavigationController
+    private var vc: MainVC!
     
     // MARK: Instance Methods
     public override func start() {
         super.start()
+        self.navigationController.navigationItem.hidesBackButton = true
+        
         let vc: MainVC = MainVC(delegate: self)
+        self.vc = vc
         self.navigationController.pushViewController(
             vc,
             animated: true
@@ -36,6 +40,10 @@ public final class MainCoordinator: AbstractCoordinator {
 }
 
 extension MainCoordinator: MainVCDelegate {
+    public func logoutTapped() {
+        
+    }
+    
     public func selected() {
         let detailCoordinator: DetailCoordinator = DetailCoordinator(
             navigationController: self.navigationController
@@ -67,4 +75,8 @@ extension MainCoordinator: UINavigationControllerDelegate {
         self.remove(childCoordinator: coordinator)
         self.navigationController.delegate = self
     }
+}
+
+extension MainCoordinator: LoginVCDelegate {
+    public func loginTapped() {}
 }

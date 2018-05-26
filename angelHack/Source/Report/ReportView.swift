@@ -16,8 +16,7 @@ class ReportView: HeroView {
         view.setTitle("close", for: UIControlState.normal)
         view.setTitleColor(UIColor.black, for: UIControlState.normal)
         return view
-    }()
-    
+    }()    
     
     public override init(frame: CGRect) {
         super.init(frame: frame)

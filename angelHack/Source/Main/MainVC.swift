@@ -40,6 +40,15 @@ class MainVC: JAViewController {
         
         self.dataSource = MainDataSource(agencies: agenciesData, collectionView: self.collectionView)
         self.collectionView.delegate = self
+        
+        /// Navigation Bar Set up
+        self.setUpNavigationItem { [unowned self] (item: UINavigationItem) -> Void in
+            item.rightBarButtonItem = self.rootView.logoutButtonItem
+            item.rightBarButtonItem?.target = self
+            item.rightBarButtonItem?.action = #selector(MainVC.logoutAction)
+            
+            item.leftBarButtonItem = self.rootView.backButton
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,6 +70,16 @@ private extension MainVC {
     unowned var collectionView: UICollectionView { return self.rootView.collectionView } // swiftlint:disable:this force_cast
 }
 
+// MARK: - Target Action
+private extension MainVC {
+    
+    @objc func logoutAction() {
+        print("LOGOUT")
+        
+        self.delegate.logoutTapped()
+    }
+}
+
 
 // MARK: - FavoritesSectionController Protocols
 extension MainVC: UICollectionViewDelegateFlowLayout {
@@ -78,5 +97,4 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
         
         print(" CARD IS CLICKED")
     }
-    
 }

@@ -26,6 +26,27 @@ public final class MainView: HeroView {
         return view
     }()
     
+    public let logoutButtonItem: UIBarButtonItem = {
+        let item: UIBarButtonItem = UIBarButtonItem(
+            title: "logout",
+            style: UIBarButtonItemStyle.plain,
+            target: nil,
+            action: nil
+        )
+        item.tintColor = UIColor.black
+        return item
+    }()
+    
+    public let backButton: UIBarButtonItem = {
+        let view: UIBarButtonItem = UIBarButtonItem(
+            title: "",
+            style: .plain,
+            target: nil,
+            action: nil
+        )
+        return view
+    }()
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -39,7 +60,6 @@ public final class MainView: HeroView {
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview().inset(10.0)
         }
-        
     }
     
     public required init?(coder aDecoder: NSCoder) {

@@ -28,6 +28,8 @@ public final class DetailCoordinator: AbstractCoordinator {
     public override func start() {
         super.start()
         let vc: DetailVC = DetailVC(delegate: self)
+        
+        self.navigationController.delegate = self
         self.navigationController.pushViewController(
             vc,
             animated: true
@@ -43,5 +45,26 @@ extension DetailCoordinator: DetailVCDelegate {
         
         reportCoordinator.start()
         self.add(childCoordinator: reportCoordinator)
+    }
+}
+
+// MARK: - UINavigationControllerDelegate Protocol
+extension DetailCoordinator: UINavigationControllerDelegate {
+    
+    public func navigationController(
+        _ navigationController: UINavigationController,
+        didShow viewController: UIViewController,
+        animated: Bool) {
+        
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(
+            forKey: UITransitionContextViewControllerKey.from),
+            !navigationController.viewControllers.contains(fromViewController)
+            else { return }
+        
+        guard let coordinator = self.childCoordinators.first
+            else { return }
+        
+        self.remove(childCoordinator: coordinator)
+        self.navigationController.delegate = self
     }
 }

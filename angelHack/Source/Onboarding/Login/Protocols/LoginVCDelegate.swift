@@ -1,5 +1,5 @@
 //
-//  MainVCDelegate.swift
+//  LoginVCDelegate.swift
 //  angelHack
 //
 //  Created by alvin joseph valdez on 26/05/2018.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-public protocol MainVCDelegate: class {
-    func selected()
-    
-    func logoutTapped()
+public protocol LoginVCDelegate: class {
+    func loginTapped()
 }
