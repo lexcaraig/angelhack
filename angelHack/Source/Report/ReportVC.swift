@@ -1,5 +1,5 @@
 //
-//  DetailVC.swift
+//  ReportVC.swift
 //  angelHack
 //
 //  Created by alvin joseph valdez on 26/05/2018.
@@ -9,12 +9,12 @@
 import UIKit
 import Kio
 
-class DetailVC: JAViewController {
+class ReportVC: JAViewController {
     
     // MARK: Delegate Properties
-    private unowned let delegate: DetailVCDelegate
+    private unowned let delegate: ReportVCDelegate
     
-    public init(delegate: DetailVCDelegate) {
+    public init(delegate: ReportVCDelegate) {
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
@@ -24,34 +24,35 @@ class DetailVC: JAViewController {
     }
     
     public override func loadView() {
-        self.view = DetailView()
+        self.view = ReportView()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setUpTargetActions(with: [
-            self.rootView.reportButton: #selector(DetailVC.reportAction),
-        ])
+                self.rootView.closeButton : #selector(ReportVC.closeAction)
+            ]
+        )
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 }
 
 // MARK: - Views
-private extension DetailVC {
-    unowned var rootView: DetailView { return self.view as! DetailView } // swiftlint:disable:this force_cast
+private extension ReportVC {
+    unowned var rootView: ReportView { return self.view as! ReportView } // swiftlint:disable:this force_cast
 }
 
 // MARK: - Target Actions
-private extension DetailVC {
+private extension ReportVC {
     
-    @objc func reportAction() {
-        self.delegate.reportTapped()
+    @objc func closeAction() {        
+        self.delegate.closeTapped()
     }
-    
 }
+

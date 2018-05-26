@@ -1,5 +1,5 @@
 //
-//  DetailCoordinator.swift
+//  ReportCoordinator.swift
 //  angelHack
 //
 //  Created by alvin joseph valdez on 26/05/2018.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public final class DetailCoordinator: AbstractCoordinator {
+public final class ReportCoordinator: AbstractCoordinator {
     
     // MARK: Delegate Properties
     //    private unowned let delegate: MainCoordinatorDelegate
@@ -23,25 +23,20 @@ public final class DetailCoordinator: AbstractCoordinator {
     
     // MARK: Stored Properties
     private let navigationController: UINavigationController
+    private var vc: ReportVC!
     
     // MARK: Instance Methods
     public override func start() {
         super.start()
-        let vc: DetailVC = DetailVC(delegate: self)
-        self.navigationController.pushViewController(
-            vc,
-            animated: true
-        )
+        let vc: ReportVC = ReportVC(delegate: self)
+        self.vc = vc
+        self.navigationController.present(vc, animated: true, completion: nil)
     }
 }
 
-extension DetailCoordinator: DetailVCDelegate {
-    public func reportTapped() {
-        let reportCoordinator: ReportCoordinator = ReportCoordinator(
-            navigationController: self.navigationController
-        )
-        
-        reportCoordinator.start()
-        self.add(childCoordinator: reportCoordinator)
+extension ReportCoordinator: ReportVCDelegate {
+    public func closeTapped() {
+        self.remove(childCoordinator: self)
+        vc.dismiss(animated: true, completion: nil)
     }
 }

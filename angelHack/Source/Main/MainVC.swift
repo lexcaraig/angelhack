@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Kio
 
-class MainVC: HeroViewController {
+class MainVC: JAViewController {
     
     // MARK: Delegate Properties
     private unowned let delegate: MainVCDelegate
