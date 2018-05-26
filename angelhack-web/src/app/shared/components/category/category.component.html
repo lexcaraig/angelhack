@@ -10,7 +10,12 @@
       {{ description }}
     </p>
   </mat-card-content>
-  <mat-card-actions>
-    <a mat-a [routerLink]="['../reports', name]">VIEW</a>
+  <mat-card-actions align="end">
+    <a
+      mat-button
+      color="accent"
+      [routerLink]="['../reports', name]">
+      VIEW
+    </a>
   </mat-card-actions>
 </mat-card>

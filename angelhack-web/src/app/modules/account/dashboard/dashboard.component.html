@@ -2,10 +2,9 @@
   <label class="angelhack-utils__page-label">Dashboard</label>
   <span></span>
 </div>
-<div fxLayout="row" fxFlexFill fxLayoutGap="10px grid">
+<div fxLayout="row layout-wrap" fxLayoutGap="10px grid">
   <angelhack-category
     *ngFor="let service of services"
-    fxFlex="350px"
     [avatar]      ="service.avatar"
     [name]        ="service.name"
     [title]       ="service.title"
