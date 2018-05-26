@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  appName: 'Angel Hack Buddies',
   firebase: {
     apiKey: 'AIzaSyBpPGIgKtCBZf8j57bXoeKxqBQMYhstXag',
     authDomain: 'angelhack-c3e81.firebaseapp.com',
