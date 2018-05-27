@@ -13,14 +13,16 @@ import { Reports } from '../../../shared/mocks/reports.mock';
 })
 export class ReportListComponent implements OnInit {
   columns = ['username', 'type', 'date', 'action'];
-  report_list: Observable<any[]>;
+  report_list: Observable<any>;
   //reportsMock = Reports;
 
   constructor(
     private _afd: AngularFireDatabase,
     public dialog: MatDialog
   ) {
-    this.report_list = _afd.list('report_list').valueChanges();
+     _afd.object('report_list').valueChanges().subscribe(report_list => {
+      console.log(report_list);
+    });
    }
     ngOnInit() {
   }

@@ -7,8 +7,19 @@
   [source]="report_list"
   (onView)="openReportDetailsDialog($event)">
   
-  <!--td *ngFor="let report of report_list | async">
-    {{report | json}}
-  </td-->
+  <!--tr>
+    <th>Username</th>
+    <td>(report_list|async)?.username</td>
+
+    <th>Type</th>
+    <td>(report_list.async)?.type</td>
+
+    <th>Date</th>
+    <td>(report_list.async)?.date</td>
+
+    <th>Action</th>
+    <td></td>
+  </tr-->
+
 </angelhack-table>
 
