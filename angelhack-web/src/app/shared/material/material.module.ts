@@ -8,6 +8,7 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 import {
   MatAutocompleteModule,
+  MatBadgeModule,
   MatButtonModule,
   MatButtonToggleModule,
   MatCardModule,

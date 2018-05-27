@@ -1,17 +1,27 @@
 <mat-card>
-  <mat-card-header>
-    <div mat-card-avatar [class]="'header-image ' + avatar">
-    </div>
-    <mat-card-title>{{ name }}</mat-card-title>
-    <mat-card-subtitle>{{ title }}</mat-card-subtitle>
-  </mat-card-header>
   <mat-card-content>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxLayout="row" fxLayoutAlign="start center">
+        <div mat-card-avatar [class]="'header-image ' + avatar">
+        </div>
+        <div>
+          <p>{{ name }}</p>
+          <p>{{ title }}</p>
+        </div>
+      </div>
+      <mat-chip-list>
+        <mat-chip color="primary" selected="true">1</mat-chip>
+      </mat-chip-list>
+    </div>
     <p>
       {{ description }}
     </p>
   </mat-card-content>
   <mat-card-actions align="end">
-    <a mat-button color="accent" [routerLink]="['../reports', name]">
+    <a
+      mat-button
+      color="accent"
+      [routerLink]="['../reports', name]">
       VIEW
     </a>
   </mat-card-actions>
