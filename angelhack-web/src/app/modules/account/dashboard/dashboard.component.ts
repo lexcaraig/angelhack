@@ -12,19 +12,19 @@ export class DashboardComponent implements OnInit {
     {
       avatar: 'lto-header-image',
       name: 'LTO',
-      title: 'Land Transfortaion Office',
+      title: 'Land Transportation Office',
       description: 'Something'
     },
     {
       avatar: 'mmda-header-image',
       name: 'MMDA',
-      title: 'Metropolitan',
+      title: 'Metropolitan Manila Dev\'t Authority',
       description: 'Something'
     },
     {
       avatar: 'lgu-header-image',
       name: 'LGU',
-      title: 'Land Transfortaion Office',
+      title: 'Local Government Unit',
       description: 'Something'
     }
   ];
