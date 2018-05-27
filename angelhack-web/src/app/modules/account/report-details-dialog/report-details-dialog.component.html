@@ -18,7 +18,7 @@
     <div>
       <mat-tab-group>
         <mat-tab label="Attachments">
-          <img [src]="details.attachments" alt="">
+          <img [src]="details.attachments" alt="" class="angelhack-report-details-dialog__attachment">
         </mat-tab>
         <mat-tab label="Location">
           <agm-map style="height: 400px;" [latitude]="details.geoLocation.lat" [longitude]="details.geoLocation.lng">

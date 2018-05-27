@@ -28,9 +28,12 @@
               "src/manifest.json"
             ],
             "styles": [
+              "node_modules/angular-notifier/styles.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+
+            ]
           },
           "configurations": {
             "production": {

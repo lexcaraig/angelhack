@@ -8,6 +8,8 @@ import { Reports } from '../../../shared/mocks/reports.mock';
 import { ReportsService } from '../../../shared/services/reports.service';
 import { ActivatedRoute } from '@angular/router';
 
+import { NotifierService } from 'angular-notifier';
+
 @Component({
   selector: 'angelhack-report-list',
   templateUrl: './report-list.component.html',
@@ -20,13 +22,19 @@ export class ReportListComponent implements OnInit {
   constructor(
     private reportService: ReportsService,
     public dialog: MatDialog,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private notifierService: NotifierService
   ) {}
 
   ngOnInit() {
     this.reports$ = this.reportService.getAllReportsByService(
       this.route.snapshot.params.name
     );
+    this.reports$
+      .subscribe(() => this.notifierService.notify(
+        'success',
+        'You have successfully updated the data!'
+      ));
   }
 
   openReportDetailsDialog(details) {
