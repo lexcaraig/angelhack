@@ -5,6 +5,7 @@ import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { CategoryComponent } from './category/category.component';
 import { TableComponent } from './table/table.component';
+import { StatusBarComponent } from './status-bar/status-bar.component';
 
 @NgModule({
   imports: [
@@ -16,12 +17,14 @@ import { TableComponent } from './table/table.component';
   declarations: [
     ToolbarComponent,
     CategoryComponent,
-    TableComponent
+    TableComponent,
+    StatusBarComponent
   ],
   exports: [
     ToolbarComponent,
     CategoryComponent,
-    TableComponent
+    TableComponent,
+    StatusBarComponent
   ]
 })
 export class ComponentsModule { }
