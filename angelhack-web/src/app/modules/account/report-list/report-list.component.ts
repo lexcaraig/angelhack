@@ -11,7 +11,7 @@ import { Reports } from '../../../shared/mocks/reports.mock';
   styleUrls: ['./report-list.component.scss']
 })
 export class ReportListComponent implements OnInit {
-  columns = ['name', 'type', 'actions'];
+  columns = ['name', 'type', 'date', 'actions'];
   reportsMock = Reports;
 
   constructor(
