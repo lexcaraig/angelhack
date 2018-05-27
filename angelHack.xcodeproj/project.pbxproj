@@ -39,6 +39,9 @@
 		7C11E90D20B973920035DA15 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E90C20B973920035DA15 /* LoginCoordinator.swift */; };
 		7C11E91020B980830035DA15 /* LoginVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E90F20B980830035DA15 /* LoginVCDelegate.swift */; };
 		7C11E91220B98F2A0035DA15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C11E91120B98F290035DA15 /* GoogleService-Info.plist */; };
+		7C11E91420BA401E0035DA15 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E91320BA401E0035DA15 /* Report.swift */; };
+		7C11E91720BA5EFC0035DA15 /* DetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E91620BA5EFC0035DA15 /* DetailDataSource.swift */; };
+		7C11E91920BA5F470035DA15 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E91820BA5F470035DA15 /* DetailCell.swift */; };
 		9CD0550B454706255DBDC284 /* Pods_angelHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FB7C7D96B2E9B1A6DB318F /* Pods_angelHack.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +104,9 @@
 		7C11E90C20B973920035DA15 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		7C11E90F20B980830035DA15 /* LoginVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCDelegate.swift; sourceTree = "<group>"; };
 		7C11E91120B98F290035DA15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7C11E91320BA401E0035DA15 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		7C11E91620BA5EFC0035DA15 /* DetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataSource.swift; sourceTree = "<group>"; };
+		7C11E91820BA5F470035DA15 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		9ADF12FC7F280B035EB3CB2B /* Pods_angelHackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_angelHackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF85A13C752366D2C522318C /* Pods-angelHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-angelHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-angelHack/Pods-angelHack.debug.xcconfig"; sourceTree = "<group>"; };
 		AFF14B0C1196FDCE12EC16A6 /* Pods-angelHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-angelHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-angelHack/Pods-angelHack.release.xcconfig"; sourceTree = "<group>"; };
@@ -281,6 +287,8 @@
 				7C11E8F320B958F90035DA15 /* DetailCoordinator.swift */,
 				7C11E8F520B959420035DA15 /* DetailVC.swift */,
 				7C11E8F720B959C40035DA15 /* DetailView.swift */,
+				7C11E91620BA5EFC0035DA15 /* DetailDataSource.swift */,
+				7C11E91820BA5F470035DA15 /* DetailCell.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 		7C11E8F920B960F40035DA15 /* Report */ = {
 			isa = PBXGroup;
 			children = (
+				7C11E91520BA40230035DA15 /* Model */,
 				7C11E90320B9694F0035DA15 /* Protocols */,
 				7C11E8FA20B9611A0035DA15 /* ReportCoordinator.swift */,
 				7C11E8FC20B961390035DA15 /* ReportVC.swift */,
@@ -337,6 +346,14 @@
 				7C11E90F20B980830035DA15 /* LoginVCDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7C11E91520BA40230035DA15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C11E91320BA401E0035DA15 /* Report.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		93A02D2DD5826A1E1EF0816F /* Pods */ = {
@@ -587,6 +604,7 @@
 				7C11E8EE20B952900035DA15 /* Agencies.swift in Sources */,
 				7C11E90520B969620035DA15 /* ReportVCDelegate.swift in Sources */,
 				7C11E8A820B8FF400035DA15 /* MainVC.swift in Sources */,
+				7C11E91720BA5EFC0035DA15 /* DetailDataSource.swift in Sources */,
 				7C11E90220B962940035DA15 /* DetailVCDelegate.swift in Sources */,
 				7C11E8FB20B9611A0035DA15 /* ReportCoordinator.swift in Sources */,
 				7C11E8E420B91BF10035DA15 /* MainView.swift in Sources */,
@@ -599,11 +617,13 @@
 				7C11E91020B980830035DA15 /* LoginVCDelegate.swift in Sources */,
 				7C11E8E620B91C540035DA15 /* AppCoordinator.swift in Sources */,
 				7C11E8E020B91AD70035DA15 /* Coordinator.swift in Sources */,
+				7C11E91920BA5F470035DA15 /* DetailCell.swift in Sources */,
 				7C11E8DC20B91A810035DA15 /* AbstractCoordinator.swift in Sources */,
 				7C11E90920B973430035DA15 /* LoginView.swift in Sources */,
 				7C11E90D20B973920035DA15 /* LoginCoordinator.swift in Sources */,
 				7C11E8DE20B91AA90035DA15 /* Subclasses.swift in Sources */,
 				7C11E8FF20B9615F0035DA15 /* ReportView.swift in Sources */,
+				7C11E91420BA401E0035DA15 /* Report.swift in Sources */,
 				7C11E8E820B93DBE0035DA15 /* MainDataSource.swift in Sources */,
 				7C11E8F820B959C40035DA15 /* DetailView.swift in Sources */,
 				7C11E8F620B959420035DA15 /* DetailVC.swift in Sources */,

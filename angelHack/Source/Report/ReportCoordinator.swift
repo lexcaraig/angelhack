@@ -80,13 +80,33 @@ extension ReportCoordinator: ReportVCDelegate, UIImagePickerControllerDelegate, 
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpeg"
         
-        storageRef.child("images").putData(imageData as Data, metadata: metadata) { (metaData, error) in
+        let starsRef = storageRef.child("images")
+        
+        starsRef.putData(imageData as Data, metadata: metadata) { (metaData, error) in
             if let error = error {
                 print(error.localizedDescription)
                 return
             }else{
                 //store downloadURL
-                print("Success")
+                starsRef.downloadURL(completion: { (url: URL?, error: Error?) -> Void in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    } else {
+                        
+                        let childRef = Database.database().reference(withPath: "reports")
+                        
+                        let reportItem: Report = Report(
+                            userName: "sample",
+                            completed: false,
+                            attachments: "\(String(describing: url!))",
+                            description: self.vc.rootView.descriptionTextView.text
+                        )
+                        childRef.child("lto").child(UUID().uuidString).setValue(reportItem.toAnyObject())
+                        
+//                        self.remove(childCoordinator: self)
+                        self.vc.dismiss(animated: true, completion: nil)
+                    }
+                })
             }
         }
         

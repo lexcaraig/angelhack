@@ -11,6 +11,19 @@ import SnapKit
 
 class DetailView: HeroView {
     
+    public let collectionView: UICollectionView = {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        let view: UICollectionView = UICollectionView(
+            frame: CGRect.zero,
+            collectionViewLayout: layout
+        )
+        
+        view.showsVerticalScrollIndicator = false
+        view.backgroundColor = UIColor.clear
+        view.isUserInteractionEnabled = true
+        return view
+    }()
+    
     public let reportButton: UIButton = {
         let view: UIButton = UIButton()
         view.setTitle("+", for: UIControlState.normal)
@@ -24,13 +37,22 @@ class DetailView: HeroView {
         
         self.backgroundColor = UIColor.lightGray
         
-        self.rpd.subviews(forAutoLayout: [self.reportButton])
+        self.rpd.subviews(forAutoLayout: [self.reportButton, self.collectionView])
+        
+        self.bringSubview(toFront: self.reportButton)
         
         self.reportButton.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.width.equalTo(80)
             make.height.equalTo(80)
             make.bottom.equalToSuperview().inset(20.0)
             make.trailing.equalToSuperview().inset(20.0)
+        }
+        
+        self.collectionView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview().inset(10.0)
         }
     }
     

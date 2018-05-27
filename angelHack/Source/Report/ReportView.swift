@@ -18,6 +18,13 @@ class ReportView: HeroView {
         return view
     }()
     
+    public let descriptionTextView: UITextView = {
+        let view: UITextView = UITextView()
+        view.layer.borderWidth = 1
+        view.font = UIFont.boldSystemFont(ofSize: 15.0)
+        return view
+    }()
+    
     public let attachmentButton: UIButton = {
         let view: UIButton = UIButton()
         view.setTitle("Add Attachment", for: UIControlState.normal)
@@ -29,8 +36,10 @@ class ReportView: HeroView {
         let view: UIButton = UIButton()
         view.setTitle("Send Report", for: UIControlState.normal)
         view.setTitleColor(UIColor.black, for: UIControlState.normal)
+        view.backgroundColor = UIColor.green
         return view
     }()
+    
     
     public let attachmentPreview: UIImageView = {
         let view: UIImageView = UIImageView()
@@ -45,7 +54,8 @@ class ReportView: HeroView {
         
         self.rpd.subviews(forAutoLayout: [
                 self.closeButton, self.attachmentButton,
-                self.attachmentPreview, self.sendReportButton
+                self.attachmentPreview, self.sendReportButton,
+                self.descriptionTextView
             ]
         )
         
@@ -64,6 +74,13 @@ class ReportView: HeroView {
         super.layoutSubviews()
         
         let attackmentButtonWidth: Float = Float(self.frame.size.width / 2)
+        
+        self.descriptionTextView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.top.equalToSuperview().offset(100.0)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(300.0)
+            make.height.equalTo(200.0)
+        }
         
         self.attachmentPreview.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
             make.bottom.equalTo(self.attachmentButton.snp.top)

@@ -30,18 +30,16 @@ class ReportVC: JAViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()    
         
-        let ref = Database.database().reference(withPath: "reports")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ReportVC.rootViewTapped))
+        self.rootView.addGestureRecognizer(tap)
         
-        ref.observe(.value, with: { snapshot in
-            print(snapshot.value as Any)
-        })
-
         self.setUpTargetActions(with: [
                 self.rootView.closeButton : #selector(ReportVC.closeAction),
                 self.rootView.attachmentButton: #selector(ReportVC.attachmentAction),
                 self.rootView.sendReportButton: #selector(ReportVC.sendReportAction)
+            
             ]
         )
     }
@@ -56,6 +54,7 @@ class ReportVC: JAViewController {
 // MARK: - Views
 extension ReportVC {
     unowned var rootView: ReportView { return self.view as! ReportView } // swiftlint:disable:this force_cast
+    
 }
 
 // MARK: - Target Actions
@@ -72,5 +71,18 @@ private extension ReportVC {
     @objc func sendReportAction() {
         self.delegate.sendReport()
     }
+    
+    @objc func rootViewTapped() {
+        self.rootView.descriptionTextView.resignFirstResponder()
+    }
 }
 
+//extension ReportVC: UITextViewDelegate {
+//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+//        if(text == "\n") {
+//            textView.resignFirstResponder()
+//            return false
+//        }
+//        return true
+//    }
+//}
