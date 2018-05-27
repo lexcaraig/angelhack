@@ -26,7 +26,7 @@ open class AppCoordinator: AbstractCoordinator {
     private unowned let window: UIWindow
     private unowned let rootViewController: UINavigationController
     
-    open override func start() {
+    open override func start() {        
         let mainCoordinator: LoginCoordinator = LoginCoordinator(
             navigationController: self.rootViewController
         )

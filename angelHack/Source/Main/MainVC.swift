@@ -32,6 +32,8 @@ class MainVC: JAViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Ontr²es"
+        
         let agenciesData: [Agencies] = [
             Agencies(name: "LTO", logo: #imageLiteral(resourceName: "lto")),
             Agencies(name: "MMDA", logo: #imageLiteral(resourceName: "mmda")),

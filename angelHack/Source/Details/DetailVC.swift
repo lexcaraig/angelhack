@@ -31,6 +31,8 @@ class DetailVC: JAViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "My Reports"
+        
         let ref = Database.database().reference(withPath: "reports")
         
         var reportsData: [Report] = [Report]()
@@ -80,17 +82,15 @@ private extension DetailVC {
 
 // MARK: - Target Actions
 private extension DetailVC {
-    
     @objc func reportAction() {
         self.delegate.reportTapped()
     }
-    
 }
 
 // MARK: - FavoritesSectionController Protocols
 extension DetailVC: UICollectionViewDelegateFlowLayout {
     
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {        
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cardHeight: CGFloat = self.rootView.bounds.height / 5
         return CGSize(width: 500.0, height: cardHeight)
     }
