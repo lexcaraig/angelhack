@@ -10,6 +10,7 @@ target 'angelHack' do
   pod 'Kio', :git => 'https://github.com/hooliooo/Kio.git'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   
   target 'angelHackTests' do
     inherit! :search_paths

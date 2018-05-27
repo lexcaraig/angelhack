@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseStorage
 
 public final class ReportCoordinator: AbstractCoordinator {
     
@@ -25,6 +27,7 @@ public final class ReportCoordinator: AbstractCoordinator {
     private let navigationController: UINavigationController
     private var vc: ReportVC!
     let imagePicker: UIImagePickerController = UIImagePickerController()
+    var imagePathURL: URL!
     
     // MARK: Instance Methods
     public override func start() {
@@ -38,9 +41,14 @@ public final class ReportCoordinator: AbstractCoordinator {
 extension ReportCoordinator: ReportVCDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            let url: URL = (info[UIImagePickerControllerImageURL] as? URL)!
+            
             self.vc.rootView.attachmentPreview.contentMode = .scaleAspectFit
             self.vc.rootView.attachmentPreview.image = pickedImage
             self.imagePicker.dismiss(animated: true, completion: nil)
+            
+            self.imagePathURL = url
         }
     }
     
@@ -64,7 +72,23 @@ extension ReportCoordinator: ReportVCDelegate, UIImagePickerControllerDelegate, 
     
     public func sendReport() {
         let image: UIImage = self.vc.rootView.attachmentPreview.image!
-        let imageData: Data = UIImagePNGRepresentation(image)!
-        print(imageData)
+        let imageData: NSData = UIImageJPEGRepresentation(image, 0.8)! as NSData
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        
+        storageRef.child("images").putData(imageData as Data, metadata: metadata) { (metaData, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }else{
+                //store downloadURL
+                print("Success")
+            }
+        }
+        
     }
 }

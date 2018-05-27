@@ -7,6 +7,9 @@ PODS:
   - Firebase/Database (5.0.1):
     - Firebase/CoreOnly
     - FirebaseDatabase (= 5.0.0)
+  - Firebase/Storage (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseStorage (= 3.0.0)
   - FirebaseAnalytics (5.0.0):
     - FirebaseCore (~> 5.0)
     - FirebaseInstanceID (~> 3.0)
@@ -19,9 +22,13 @@ PODS:
     - leveldb-library (~> 1.18)
   - FirebaseInstanceID (3.0.0):
     - FirebaseCore (~> 5.0)
+  - FirebaseStorage (3.0.0):
+    - FirebaseCore (~> 5.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleToolboxForMac/Defines (2.1.4)
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
+  - GTMSessionFetcher/Core (1.1.15)
   - Kio (1.0.0)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
@@ -34,6 +41,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
+  - Firebase/Storage
   - Kio (from `https://github.com/hooliooo/Kio.git`)
   - SnapKit (~> 4.0.0)
 
@@ -44,7 +52,9 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseDatabase
     - FirebaseInstanceID
+    - FirebaseStorage
     - GoogleToolboxForMac
+    - GTMSessionFetcher
     - leveldb-library
     - nanopb
     - SnapKit
@@ -64,12 +74,14 @@ SPEC CHECKSUMS:
   FirebaseCore: cafc814b2d84fc8733f09e653041cc2165332ad7
   FirebaseDatabase: 697eb53e5b4fe7cd4fa8756c1f82a9fca011345f
   FirebaseInstanceID: 83e0040351565df711a5db3d8ebe5ea21aca998a
+  FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   Kio: 8b06fd71440719d60bff6b6543cbeeef85c1796c
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 06f918c294456b63d0f27f3dcd1ed8781e756f51
+PODFILE CHECKSUM: 811b0af2194b4c886d6b8ee3561efff2e5485dd5
 
 COCOAPODS: 1.5.2
