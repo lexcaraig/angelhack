@@ -11,6 +11,7 @@ import { FirebaseModule } from '../../shared/firebase/firebase.module';
 import { ReportDetailsDialogComponent } from './report-details-dialog/report-details-dialog.component';
 import { AgmCoreModule } from '@agm/core';
 import { environment } from '../../../environments/environment';
+import { ServicesModule } from '../../shared/services/services.module';
 @NgModule({
   imports: [
     CommonModule,
@@ -21,7 +22,8 @@ import { environment } from '../../../environments/environment';
     FirebaseModule,
 
     ComponentsModule,
-    MaterialModule
+    MaterialModule,
+    ServicesModule
   ],
   declarations: [
     AccountComponent,
