@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 import { Reports } from '../../../shared/mocks/reports.mock';
+import { ReportsService } from '../../../shared/services/reports.service';
 
 @Component({
   selector: 'angelhack-reports',
@@ -13,22 +14,24 @@ export class ReportsComponent implements OnInit {
   displayedColumns = ['username', 'preview', 'type', 'action'];
   dataSource = ReportPreview;
 
-  constructor(private _afd: AngularFireDatabase) {
-
-  }
+  constructor(
+    private _afd: AngularFireDatabase,
+    private reportService: ReportsService
+  ) {}
 
   ngOnInit() {}
 
   onFilter() {
     this.isPending = !this.isPending;
+    this.reportService.statusFilter$.next(this.isPending);
   }
 }
 
 const ReportPreview = [
   {
-    username: "trishmoreno02",
-    preview: "May sunog dito sa\'min",
-    type: "Medical",
-    action: " "
+    username: 'trishmoreno02',
+    preview: "May sunog dito sa'min",
+    type: 'Medical',
+    action: ' '
   }
 ];
