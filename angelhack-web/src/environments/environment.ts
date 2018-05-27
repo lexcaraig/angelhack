@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  appName: 'Angel Hack Buddies',
+  appName: 'on-TRES',
+  appDescription: 'One Touch Response Emergency System',
   firebase: {
     apiKey: 'AIzaSyANqfJV9tZL_e2FPuskx_IZ_uz5B4Q9OKc',
     authDomain: 'angel-hack-f10fb.firebaseapp.com',

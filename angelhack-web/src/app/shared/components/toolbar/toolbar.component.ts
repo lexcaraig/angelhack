@@ -8,6 +8,7 @@ import { environment } from '../../../../environments/environment';
 })
 export class ToolbarComponent implements OnInit {
   public appName: string = environment.appName;
+  public description: string = environment.appDescription;
 
   constructor() { }
 

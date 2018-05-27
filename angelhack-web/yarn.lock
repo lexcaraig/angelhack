@@ -340,6 +340,26 @@
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
+"@ngx-loading-bar/core@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@ngx-loading-bar/core/-/core-2.0.0.tgz#a12963107d841089a79568e3b886e8aa12beaba2"
+  dependencies:
+    tslib "^1.7.1"
+
+"@ngx-loading-bar/http-client@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@ngx-loading-bar/http-client/-/http-client-2.0.0.tgz#61d165b0109cbbeef82ef223b2113ef67a660ba4"
+  dependencies:
+    "@ngx-loading-bar/core" "2.0.0"
+    tslib "^1.7.1"
+
+"@ngx-loading-bar/router@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@ngx-loading-bar/router/-/router-2.0.0.tgz#90553e4d2f970b20746cf32a1c7401581cb90e3e"
+  dependencies:
+    "@ngx-loading-bar/core" "2.0.0"
+    tslib "^1.7.1"
+
 "@schematics/angular@0.6.5":
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.6.5.tgz#407f476ba1fea1ac5ef661b15c135af216ec710c"
