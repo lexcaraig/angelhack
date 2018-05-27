@@ -4,11 +4,23 @@
 </div>
 <div fxLayout="row layout-wrap" fxLayoutGap="10px grid">
   <angelhack-category
+    fxShow
+    fxHide.lt-sm
     *ngFor="let service of services"
     [avatar]      ="service.avatar"
     [name]        ="service.name"
     [title]       ="service.title"
     [description] ="service.description">
   </angelhack-category>
+  <mat-nav-list fxShow fxHide.gt-xs>
+    <mat-list-item
+      *ngFor="let service of services"
+      [routerLink]="['../reports', service.name]">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <h4 mat-line>{{service.name}}</h4>
+      <p mat-line> {{service.title}}</p>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-nav-list>
 </div>
 

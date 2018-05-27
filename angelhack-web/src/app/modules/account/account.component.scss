@@ -17,6 +17,12 @@ mat-sidenav {
   top: 84px !important;
 }
 
+@media screen and (max-width: 599px) {
+  .sidenav-content {
+    top: 76px !important;
+  }
+}
+
 mat-sidenav-content {
   margin-left: 280px;
   background-color: #e8e8e8;

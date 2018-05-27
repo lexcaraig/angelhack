@@ -11,8 +11,8 @@ export class AccountComponent implements OnInit {
     { path: '/account/dashboard', name: 'Dashboard', icon: 'dashboard' }
   ];
 
-  public sideNavMode: string = 'side';
-  public isSideNavHidden: boolean = true;
+  public sideNavMode: string;
+  public isSideNavHidden: boolean;
 
   constructor(
     private _observableMedia: ObservableMedia

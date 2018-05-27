@@ -9,7 +9,7 @@ export class ReportsService {
 
     constructor(private _afd: AngularFireDatabase) {}
 
-    getAll(type: string): Observable<any> {
+    getAllReportsByService(type: string): Observable<any> {
        return this._afd.object('reports').valueChanges()
        .pipe(map(report => report[type]));
     }
