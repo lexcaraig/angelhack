@@ -1,20 +1,27 @@
-.mmda-header-image{
-    background-image: url('mmda.png');
-    background-size:cover;
+.mmda-header-image {
+  background-image: url('/assets/icons/mmda.png');
+  background-size: cover;
 }
 
-.lto-header-image{
-    background-image: url('lto.png');
-    background-size:cover;
+.lto-header-image {
+  background-image: url('/assets/icons/lto.png');
+
+  background-size: cover;
 }
 
-.lgu-header-image{
-    background-image: url('lgu.png');
-    background-size:cover;
+.lgu-header-image {
+  background-image: url('/assets/icons/lgu.png');
+
+  background-size: cover;
 }
 
 .angelhack-category__avatar {
-  background-size:cover;
+  background-size: cover;
+}
+
+.header-image {
+  height: 50px;
+  width: 50px;
 }
 
 mat-card {

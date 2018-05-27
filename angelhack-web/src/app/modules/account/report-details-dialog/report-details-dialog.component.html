@@ -1,10 +1,30 @@
-<div fxLayout="column" fxLayoutAlign="space-between stretch"
-  class="angelhack-report-details-dialog__container">
+<div fxLayout="column" fxLayoutAlign="space-between stretch" class="angelhack-report-details-dialog__container">
   <div mat-dialog-title>
     Report Details
   </div>
   <div mat-dialog-content fxFlex class="angelhack-report-details-dialog__container-content">
-    <pre>{{ details | json }}</pre>
+    <p class="report-user-info">
+      <label class="report-field-title">User: </label>
+      <span class="report-field-content">{{ details.username }}</span>
+    </p>
+    <p>
+      <label class="report-field-title">Type: </label>
+      <span class="report-field-content">{{ details.type }}</span>
+    </p>
+    <p class="report-description">
+      <label for="" class="report-field-title">Description: </label>
+      <span class="report-field-content">{{ details.description }}</span>
+    </p>
+    <div>
+      <mat-tab-group>
+        <mat-tab label="Attachments">Content 1</mat-tab>
+        <mat-tab label="Location">
+          <agm-map style="height: 400px;" [latitude]="details.geoLocation.lat" [longitude]="details.geoLocation.lng">
+            <agm-marker [latitude]="details.geoLocation.lat" [longitude]="details.geoLocation.lng"></agm-marker>
+          </agm-map>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
   </div>
   <div mat-dialog-actions align="end">
     <button mat-raised-button color="warn">Reject</button>

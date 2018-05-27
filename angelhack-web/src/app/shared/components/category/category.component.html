@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-header>
-    <div mat-card-avatar [class]="avatar">
+    <div mat-card-avatar [class]="'header-image ' + avatar">
     </div>
     <mat-card-title>{{ name }}</mat-card-title>
     <mat-card-subtitle>{{ title }}</mat-card-subtitle>
@@ -11,10 +11,7 @@
     </p>
   </mat-card-content>
   <mat-card-actions align="end">
-    <a
-      mat-button
-      color="accent"
-      [routerLink]="['../reports', name]">
+    <a mat-button color="accent" [routerLink]="['../reports', name]">
       VIEW
     </a>
   </mat-card-actions>

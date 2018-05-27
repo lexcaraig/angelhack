@@ -12,6 +12,9 @@ export const environment = {
     projectId: 'angel-hack-f10fb',
     storageBucket: '',
     messagingSenderId: '139723233762'
+  },
+  agmMap: {
+    apiKey: 'AIzaSyDq_WWAHugtciIQNr5jG97Yh9HVooMWr7k'
   }
 };
 

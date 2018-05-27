@@ -9,11 +9,14 @@ import { ReportListComponent } from './report-list/report-list.component';
 import { ReportsComponent } from './reports/reports.component';
 import { FirebaseModule } from '../../shared/firebase/firebase.module';
 import { ReportDetailsDialogComponent } from './report-details-dialog/report-details-dialog.component';
-
+import { AgmCoreModule } from '@agm/core';
+import { environment } from '../../../environments/environment';
 @NgModule({
   imports: [
     CommonModule,
     AccountRoutingModule,
+
+    AgmCoreModule.forRoot(environment.agmMap),
 
     FirebaseModule,
 
@@ -27,8 +30,6 @@ import { ReportDetailsDialogComponent } from './report-details-dialog/report-det
     ReportsComponent,
     ReportDetailsDialogComponent
   ],
-  entryComponents: [
-    ReportDetailsDialogComponent
-  ]
+  entryComponents: [ReportDetailsDialogComponent]
 })
-export class AccountModule { }
+export class AccountModule {}
