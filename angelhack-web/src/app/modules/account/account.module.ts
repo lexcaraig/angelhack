@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+
 import { ComponentsModule } from '../../shared/components/components.module';
 import { AccountRoutingModule } from './account-routing.module';
 import { AccountComponent } from './account.component';
@@ -12,6 +13,7 @@ import { ReportDetailsDialogComponent } from './report-details-dialog/report-det
 import { AgmCoreModule } from '@agm/core';
 import { environment } from '../../../environments/environment';
 import { ServicesModule } from '../../shared/services/services.module';
+
 @NgModule({
   imports: [
     CommonModule,

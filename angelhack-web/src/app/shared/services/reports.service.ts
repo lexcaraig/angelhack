@@ -16,7 +16,6 @@ export class ReportsService {
         map(report => report[type.toLowerCase()]),
         map(report => {
           const keys = Object.keys(report);
-          console.log(report);
           return keys.map(key => report[key]);
         })
       );
