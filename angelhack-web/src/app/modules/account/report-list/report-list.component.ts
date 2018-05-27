@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { MatDialog } from '@angular/material';
+import { Observable } from 'rxjs';
 import { ReportDetailsDialogComponent } from '../report-details-dialog/report-details-dialog.component';
 
 import { Reports } from '../../../shared/mocks/reports.mock';
@@ -11,15 +12,17 @@ import { Reports } from '../../../shared/mocks/reports.mock';
   styleUrls: ['./report-list.component.scss']
 })
 export class ReportListComponent implements OnInit {
-  columns = ['name', 'type', 'date', 'actions'];
-  reportsMock = Reports;
+  columns = ['username', 'type', 'date', 'action'];
+  report_list: Observable<any[]>;
+  //reportsMock = Reports;
 
   constructor(
     private _afd: AngularFireDatabase,
     public dialog: MatDialog
-  ) { }
-
-  ngOnInit() {
+  ) {
+    this.report_list = _afd.list('report_list').valueChanges();
+   }
+    ngOnInit() {
   }
 
   openReportDetailsDialog(details) {

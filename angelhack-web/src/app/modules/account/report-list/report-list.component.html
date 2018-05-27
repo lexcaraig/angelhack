@@ -3,7 +3,12 @@
   <span></span>
 </div>
 <angelhack-table
-  [columns] ="columns"
-  [source]  ="reportsMock"
-  (onView)  ="openReportDetailsDialog($event)">
+  [columns]="columns"
+  [source]="report_list"
+  (onView)="openReportDetailsDialog($event)">
+  
+  <!--td *ngFor="let report of report_list | async">
+    {{report | json}}
+  </td-->
 </angelhack-table>
+
