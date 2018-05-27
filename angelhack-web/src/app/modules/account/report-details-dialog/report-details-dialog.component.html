@@ -5,7 +5,7 @@
   <div mat-dialog-content fxFlex class="angelhack-report-details-dialog__container-content">
     <p class="report-user-info">
       <label class="report-field-title">User: </label>
-      <span class="report-field-content">{{ details.username }}</span>
+      <span class="report-field-content">{{ details.userName }}</span>
     </p>
     <p>
       <label class="report-field-title">Type: </label>
@@ -17,7 +17,9 @@
     </p>
     <div>
       <mat-tab-group>
-        <mat-tab label="Attachments">Content 1</mat-tab>
+        <mat-tab label="Attachments">
+          <img [src]="details.attachments" alt="">
+        </mat-tab>
         <mat-tab label="Location">
           <agm-map style="height: 400px;" [latitude]="details.geoLocation.lat" [longitude]="details.geoLocation.lng">
             <agm-marker [latitude]="details.geoLocation.lat" [longitude]="details.geoLocation.lng"></agm-marker>

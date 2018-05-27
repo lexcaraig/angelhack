@@ -6,11 +6,19 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class ReportsService {
+  constructor(private _afd: AngularFireDatabase) {}
 
-    constructor(private _afd: AngularFireDatabase) {}
-
-    getAllReportsByService(type: string): Observable<any> {
-       return this._afd.object('reports').valueChanges()
-       .pipe(map(report => report[type]));
-    }
+  getAllReportsByService(type: string): Observable<any[]> {
+    return this._afd
+      .object('reports')
+      .valueChanges()
+      .pipe(
+        map(report => report[type.toLowerCase()]),
+        map(report => {
+          const keys = Object.keys(report);
+          console.log(report);
+          return keys.map(key => report[key]);
+        })
+      );
+  }
 }

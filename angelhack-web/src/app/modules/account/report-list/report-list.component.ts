@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import { ReportDetailsDialogComponent } from '../report-details-dialog/report-details-dialog.component';
 
 import { Reports } from '../../../shared/mocks/reports.mock';
+import { ReportsService } from '../../../shared/services/reports.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'angelhack-report-list',
@@ -16,12 +18,15 @@ export class ReportListComponent implements OnInit {
   reports$: Observable<any[]>;
 
   constructor(
-    private _afd: AngularFireDatabase,
-    public dialog: MatDialog
+    private reportService: ReportsService,
+    public dialog: MatDialog,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
-      this.reports$ = this._afd.list('report_list').valueChanges();
+    this.reports$ = this.reportService.getAllReportsByService(
+      this.route.snapshot.params.name
+    );
   }
 
   openReportDetailsDialog(details) {
@@ -31,5 +36,4 @@ export class ReportListComponent implements OnInit {
       data: details
     });
   }
-
 }
