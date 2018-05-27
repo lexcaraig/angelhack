@@ -3,7 +3,10 @@
     fxLayout="row"
     fxLayoutAlign="space-between center"
     class="mat-elevation-z2">
-    <span [matTooltip]="description">{{ appName }}</span>
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <ng-content></ng-content>
+      <span [matTooltip]="description">{{ appName }}</span>
+    </div>
     <span></span>
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>more_vert</mat-icon>

@@ -7,6 +7,12 @@ mat-sidenav {
   background-color: #e8e8e8;
 }
 
+@media screen and (max-width: 959px) {
+  mat-sidenav {
+    background-color: #fff;
+  }
+}
+
 .sidenav-content {
   top: 84px !important;
 }
@@ -88,6 +94,6 @@ ul {
 
 .admin-app__route-container {
   padding: 0 32px;
-  height: calc(100vh - 64px - 24px);
+  height: calc(100vh - 64px - 24px - 20px);
   margin-top: 24px;
 }

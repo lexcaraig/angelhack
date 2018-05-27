@@ -1,9 +1,13 @@
 <angelhack-status-bar></angelhack-status-bar>
-<angelhack-toolbar></angelhack-toolbar>
+<angelhack-toolbar>
+    <button mat-icon-button (click)="sidenav.toggle()" class="icon-button">
+      <mat-icon class="mat-18">menu</mat-icon>
+    </button>
+</angelhack-toolbar>
 <mat-sidenav-container class="">
   <mat-sidenav #sidenav
-    mode="side"
-    opened="true"
+    [mode]="sideNavMode"
+    [opened]="isSideNavHidden"
     fixedInViewport="true"
     class="nt-utils__background-transparent sidenav-content">
     <div fxLayout="column" fxLayoutAlign="none">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ObservableMedia } from '@angular/flex-layout';
 
 @Component({
   selector: 'angelhack-account',
@@ -10,9 +11,23 @@ export class AccountComponent implements OnInit {
     { path: '/account/dashboard', name: 'Dashboard', icon: 'dashboard' }
   ];
 
-  constructor() { }
+  public sideNavMode: string = 'side';
+  public isSideNavHidden: boolean = true;
+
+  constructor(
+    private _observableMedia: ObservableMedia
+  ) { }
 
   ngOnInit() {
+    this._observableMedia.subscribe(data => {
+      if ( data.mqAlias === 'sm' || data.mqAlias === 'xs' ) {
+        this.isSideNavHidden = false;
+        this.sideNavMode = 'over';
+      } else {
+        this.isSideNavHidden = true;
+        this.sideNavMode = 'side';
+      }
+    });
   }
 
 }
