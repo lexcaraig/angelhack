@@ -10,7 +10,6 @@ import { ReportListComponent } from './report-list/report-list.component';
 import { ReportsComponent } from './reports/reports.component';
 import { FirebaseModule } from '../../shared/firebase/firebase.module';
 import { ReportDetailsDialogComponent } from './report-details-dialog/report-details-dialog.component';
-import { AgmCoreModule } from '@agm/core';
 import { environment } from '../../../environments/environment';
 import { ServicesModule } from '../../shared/services/services.module';
 
@@ -18,8 +17,6 @@ import { ServicesModule } from '../../shared/services/services.module';
   imports: [
     CommonModule,
     AccountRoutingModule,
-
-    AgmCoreModule.forRoot(environment.agmMap),
 
     FirebaseModule,
 

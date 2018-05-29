@@ -21,9 +21,6 @@
           <img [src]="details.attachments" alt="" class="angelhack-report-details-dialog__attachment">
         </mat-tab>
         <mat-tab label="Location">
-          <agm-map style="height: 400px;" [latitude]="details.geoLocation.lat" [longitude]="details.geoLocation.lng">
-            <agm-marker [latitude]="details.geoLocation.lat" [longitude]="details.geoLocation.lng"></agm-marker>
-          </agm-map>
         </mat-tab>
       </mat-tab-group>
     </div>
