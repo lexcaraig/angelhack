@@ -1,0 +1,22 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "functions/dist/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "ssr"
+      }
+    ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}
